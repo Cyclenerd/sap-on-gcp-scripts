@@ -1,0 +1,7 @@
+.DS_Store
+config
+private_key_*
+storage_bucket/sapnw752sp4/*
+!storage_bucket/sapnw752sp4/README.md
+storage_bucket/windows/*
+!storage_bucket/windows/README.md
