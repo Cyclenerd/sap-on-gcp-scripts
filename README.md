@@ -108,7 +108,7 @@ bash 10_list_project.sh
 
 1. [Create project and enable billing](01_project/)
 1. [Enable APIs and services](01_project/)
-1. [Create a Virtual Private Cloud (VPC)](02_create_network/)
+1. [Create a Virtual Private Cloud (VPC)](02_network/)
 1. [Create Google Cloud storage bucket](03_storage/)
 
 ### Server and Services
