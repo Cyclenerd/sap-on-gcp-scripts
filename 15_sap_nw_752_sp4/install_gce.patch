@@ -1,0 +1,44 @@
+--- install.sh	2021-09-28 21:20:37.360841600 +0200
++++ install_gce.sh	2021-09-29 12:37:51.923586600 +0200
+@@ -961,6 +961,9 @@
+     set_profile_param "PHYS_MEMSIZE" "2048" /sapmnt/${SID}/profile/${SID}_D00_*
+     set_profile_param "abap/shared_objects_size_MB" "386" /sapmnt/${SID}/profile/${SID}_D00_*
+ 
++    log_echo "Update number of dialog work processes"
++    set_profile_param "rdisp/wp_no_dia" "4" /sapmnt/${SID}/profile/${SID}_D00_*
++
+     # Do not use Weak TLS that was deprecated by GitHub - see SAP note 510007, section 7
+     log_echo "Configuring strong TLS according to SAP Note 510007"
+     set_profile_param "ssl/ciphersuites" "135:PFS:HIGH::EC_P256:EC_HIGH" /sapmnt/NPL/profile/DEFAULT.PFL
+@@ -1068,7 +1071,6 @@
+         check_dependencies
+     }
+ 
+-    clear
+     echo " "
+     echo "#============================================ "
+     echo "# "
+@@ -1076,20 +1078,10 @@
+     echo "# "
+     echo "#============================================ "
+     echo " "
+-    echo " "
+-    echo "You are about to install the SAP Developer Edition"
+-    echo "Please make sure you have carefully read and understood the documentation"
+-    echo " "
+-
+-    ask_which_license
+-
+-    echo " "
+-    echo "Now we need the passwords for the OS users."
+-    echo "Please enter a password which will be used"
+-    echo "for all operating system users."
+-    echo " "
+ 
+-    ask_for_password masterpwd
++    echo "Access version 'MY_GCP_SECRET_LAST_VERSION' of secret 'MY_GCP_SECRET_NAME' from Google Secret Manager"
++    MY_GCP_SECRET=$(/root/google-cloud-sdk/bin/gcloud secrets versions access "MY_GCP_SECRET_LAST_VERSION" --secret="MY_GCP_SECRET_NAME")
++    export masterpwd="$MY_GCP_SECRET"
+ 
+     echo " "
+     echo "Now we begin with the installation."
