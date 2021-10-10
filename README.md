@@ -6,7 +6,21 @@ Including Windows Server and SAP NetWeaver AS ABAP Developer Edition 7.52 SP04.
 
 With this set of shell scripts you get the same setup on a small scale as with [large SAP on GCP projects](https://www.otto.de/jobs/technology/techblog/artikel/cloud-native-sap-operation-in-the-otto-group.php).
 
+Your servers do not get public IP addresses and therefore are not accessible from the Internet.
+This increases the security massively.
+Your servers connect to the Internet via a Cloud NAT router.
+The whole setup is comparable to your internet connection at home.
+Here you are also hidden behind a NAT router.
+
+Via the so-called Identity-Aware Proxy (IAP) you get access to your instances and can tunnel required ports to your laptop.
+
+You can also start a [Windows server](05_windows/) with graphical desktop environment in your VPC and access your servers and SAP systems from there via Remote Desktop Protocol (RDP).
+
+![Diagram: IAP, VPC and NAT](images/diagram-iap-vpn-nat.jpg)
+
 ## Requirement
+
+Just a Bash shell and the Google Cloud SDK.
 
 ### Google Cloud
 
