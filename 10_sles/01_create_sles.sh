@@ -10,7 +10,6 @@
 
 export MY_GCP_GCE_NAME="sles"
 export MY_GCP_GCE_TYPE="g1-small"
-export MY_GCP_GCE_DISK_BOOT_SIZE="32GB"
 export MY_GCP_GCE_IMAGE_FAMILY="sles-15"
 export MY_GCP_GCE_IMAGE_PROJECT="suse-cloud"
 
