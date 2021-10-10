@@ -11,6 +11,7 @@
 export MY_GCP_GCE_NAME="windows"
 export MY_GCP_GCE_TYPE="g1-small"
 export MY_GCP_GCE_DISK_BOOT_SIZE="64GB"
+export MY_GCP_GCE_DISK_BOOT_TYPE="pd-standard"
 export MY_GCP_GCE_IMAGE_FAMILY="windows-2019"
 export MY_GCP_GCE_IMAGE_PROJECT="windows-cloud"
 

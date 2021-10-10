@@ -2,6 +2,17 @@
 
 Create service account and Compute Engine virtual machine instance with Microsoft Windows Server 2019 as operating system.
 
+## Default configuration
+
+| Variable | Description | Value |
+|----------|-------------|-------|
+| MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `windows` |
+| MY_GCP_GCE_TYPE | GCE machine type | `g1-small` |
+| MY_GCP_GCE_DISK_BOOT_SIZE | Size of the boot disk | `64GB` |
+| MY_GCP_GCE_DISK_BOOT_TYPE | Type of the boot disk | `pd-standard` (HDD) |
+| MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `windows-2019` |
+| MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `windows-cloud` |
+
 ## Pricing
 
 [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator/#id=236a2be2-6ecb-46b8-ba2f-194649d516ef)
@@ -13,8 +24,8 @@ Create service account and Compute Engine virtual machine instance with Microsof
 * Operating System / Software: Paid (USD 16.79)
 * Sustained Use Discount: 30%
 * Effective Hourly Rate: USD 0.043
-* Zonal SSD PD: 64 GiB
-* Total Estimated Cost: USD 43.22 per 1 month
+* Zonal standard PD: 64 GiB (USD 2.82) [HDD not SSD! When the instance is shut down, you only pay the ring price for the disc.]
+* Total Estimated Cost: USD 34.07 per 1 month
 
 Windows Server 2019 usage fee billed by Google:
 
