@@ -88,3 +88,18 @@ roles/compute.instanceAdmin.v1
 roles/compute.networkAdmin
 roles/compute.securityAdmin
 ```
+
+## Google Compute Engine disk types
+
+To list all disk types in a project in table form, run:
+
+```shell
+gcloud compute disk-types list
+```
+
+To list all disk types in the europe-north1-c zone, run:
+
+```shell
+gcloud compute disk-types list \
+  --filter="zone:europe-north1-c"
+```
