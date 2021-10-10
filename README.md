@@ -78,6 +78,8 @@ To do this, create a file named `config` in this folder:
 echo "MY_GCP_STORAGE=my-random-storage-name-123" > config
 ```
 
+Further variables for configuration are explained below in the [Configuration](#Configuration) section.
+
 The further setup until your first server looks like this:
 ```shell
 # Project
@@ -136,6 +138,198 @@ bash 10_list_project.sh
 * [Delete project and all data](01_project/)
 * [More commands](90_more_commands/)
 
+## Configuration
+
+You can overwrite the  default configuration.
+Just create a configuration file with the name `config` in this folder or in the subfolders.
+
+Values from the configuration file in the subfolder overwrites values from the parent folder.
+
+Example:
+```shell
+# Overwrite defaults
+echo "MY_GCP_SHORT_NAME=nils" >> config
+echo "MY_GCP_PROJECT=only-a-test" >> config
+echo "MY_GCP_STORAGE=my-random-storage-name-123" >> config
+# Change name of Compute Engine virtual machine instance
+cd 04_debian
+echo "MY_GCP_GCE_NAME=linux" >> config
+```
+
+### MY_GCP_SHORT_NAME
+
+A short name to quickly separate everything
+
+* Variable: `MY_GCP_SHORT_NAME`
+* Default: `demo`
+
+### MY_GCP_PROJECT
+
+Google Cloud project ID
+
+* Variable: `MY_GCP_PROJECT`
+* Default: `sap-sandbox-$MY_GCP_SHORT_NAME`
+* Example: `sap-sandbox-demo`
+
+### MY_GCP_FOLDER
+
+Optional ID for the folder to use as a parent for the project
+
+* Variable: `MY_GCP_FOLDER`
+* Default: none
+
+### MY_GCP_REGION
+
+Compute Engine region
+
+* Variable: `MY_GCP_REGION`
+* Default: `europe-north1`
+
+### MY_GCP_ZONE
+
+Fully-qualified name for zone
+
+* Variable: `MY_GCP_ZONE`
+* Default: `$MY_GCP_REGION-c`
+* Example: `europe-north1-c`
+
+### MY_GCP_ROUTER
+
+Name of Compute Engine router
+
+* Variable: `MY_GCP_ROUTER`
+* Default: `router-$MY_GCP_REGION`
+* Example: `router-europe-north1`
+
+### MY_GCP_NAT
+
+Add a NAT to Compute Engine router
+
+* Variable: `MY_GCP_NAT`
+* Default: `nat-$MY_GCP_REGION`
+* Example: `nat-europe-north1`
+
+### MY_GCP_NETWORK
+
+Name of the Compute Engine network
+
+* Variable: `MY_GCP_NETWORK`
+* Default: `network-$MY_GCP_SHORT_NAME`
+* Example: `network-demo`
+
+### MY_GCP_SUBNET
+
+Name of the subnetwork for the network
+
+* Variable: `MY_GCP_SUBNET`
+* Default: `subnet-$MY_GCP_REGION`
+* Example: `subnet-europe-north1`
+
+### MY_GCP_SUBNET_RANGE
+
+IP space allocated to the subnetwork in CIDR format
+
+* Variable: `MY_GCP_SUBNET_RANGE`
+* Default: `192.168.201.0/24`
+
+### MY_GCP_STORAGE
+
+Name of Google Cloud storage bucket
+
+* Variable: `MY_GCP_STORAGE`
+* Default: `share-$MY_GCP_SHORT_NAME`
+* Example: `share-demo`
+
+### MY_GCP_GCE_NAME
+
+Name of Compute Engine virtual machine instance
+
+* Variable: `MY_GCP_GCE_NAME`
+* Default: `default-name`
+
+### MY_GCP_GCE_TYPE
+
+GCE machine type
+
+* Variable: `MY_GCP_GCE_TYPE`
+* Default: `e2-micro`
+
+### MY_GCP_GCE_IMAGE_FAMILY
+
+Image family for the operating system that the boot disk will be initialized with
+
+* Variable: `MY_GCP_GCE_IMAGE_FAMILY`
+* Default: `debian-10`
+
+### MY_GCP_GCE_IMAGE_PROJECT
+
+Google Cloud project against which all image and image family references will be resolved
+
+* Variable: `MY_GCP_GCE_IMAGE_PROJECT`
+* Default: `debian-cloud`
+
+### MY_GCP_GCE_DISK_BOOT_NAME
+
+Name of the boot disk
+
+* Variable: `MY_GCP_GCE_DISK_BOOT_NAME`
+* Default: `ssd-boot-$MY_GCP_GCE_NAME`
+* Example: `ssd-boot-default-name`
+
+### MY_GCP_GCE_DISK_BOOT_TYPE
+
+Type of the boot disk
+
+* Variable: `MY_GCP_GCE_DISK_BOOT_TYPE`
+* Default: `pd-ssd`
+
+### MY_GCP_GCE_DISK_BOOT_SIZE
+
+Size of the boot disk
+
+* Variable: `MY_GCP_GCE_DISK_BOOT_SIZE`
+* Default: `32GB`
+
+### MY_GCP_GCE_STARTUP_SCRIPT_URL
+
+Linux script that will be executed by the instances once they start running
+
+* Variable: `MY_GCP_GCE_STARTUP_SCRIPT_URL`
+* Default: `gs://$MY_GCP_STORAGE/startup/linux_startup_script.sh`
+* Example: `gs://share-demo/startup/linux_startup_script.sh`
+
+### MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL
+
+Windows PowerShell script that will be executed by the instances once they start running
+
+* Variable: `MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL`
+* Default: `gs://$MY_GCP_STORAGE/startup/windows_startup_script.ps1`
+* Example: `gs://share-demo/startup/windows_startup_script.ps1`
+
+### MY_GCP_SA_NAME
+
+The internal name of the new service account
+
+* Variable: `MY_GCP_SA_NAME`
+* Default: `sa-gce-$MY_GCP_GCE_NAME`
+* Example: `sa-gce-default-name`
+
+### MY_GCP_SA_DISPLAY_NAME
+
+Textual name to display for the account
+
+* Variable: `MY_GCP_SA_DISPLAY_NAME`
+* Default: `GCE $MY_GCP_GCE_NAME`
+* Example: `GCE default-name`
+
+### MY_GCP_SA_DESCRIPTION
+
+Textual description for the account
+
+* Variable: `MY_GCP_SA_DESCRIPTION`
+* Default: `Service account for Google Compute Engine server $MY_GCP_GCE_NAME`
+* Example: `Service account for Google Compute Engine server default-name`
+
 ## FAQ
 
 * Q: Why shell scripts and not Ansible, Teraform, etc.?
@@ -143,7 +337,6 @@ bash 10_list_project.sh
 
 ## TODO
 
-* Documentation of all default variables
 * Run [SAP HANA, express edition](https://hub.docker.com/_/sap-hana-express-edition) in Container-Optimized OS
 
 ## Contributing
