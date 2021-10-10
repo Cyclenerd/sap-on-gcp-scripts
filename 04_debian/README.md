@@ -2,6 +2,14 @@
 
 Create service account and Compute Engine virtual machine instance with Debian as operating system.
 
+## Configuration
+
+Configuration other than default values:
+
+| Variable | Description | Value |
+|----------|-------------|-------|
+| MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `debian` |
+
 ## Pricing
 
 [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator/#id=20043b60-057a-4105-a73e-504f7af20e74)

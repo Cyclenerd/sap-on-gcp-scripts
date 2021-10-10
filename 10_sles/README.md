@@ -2,6 +2,17 @@
 
 Create service account and Compute Engine virtual machine instance with SUSE Linux Enterprise Server 15 as operating system.
 
+## Configuration
+
+Configuration other than default values:
+
+| Variable | Description | Value |
+|----------|-------------|-------|
+| MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `sles` |
+| MY_GCP_GCE_TYPE | GCE machine type | `g1-small` |
+| MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `sles-15` |
+| MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `suse-cloud` |
+
 ## Pricing
 
 [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator/#id=246c521f-cae2-4ad5-b787-32cd001330aa)

@@ -2,7 +2,9 @@
 
 Create service account and Compute Engine virtual machine instance with Microsoft Windows Server 2019 as operating system.
 
-## Default configuration
+## Configuration
+
+Configuration other than default values:
 
 | Variable | Description | Value |
 |----------|-------------|-------|
@@ -15,7 +17,7 @@ Create service account and Compute Engine virtual machine instance with Microsof
 
 ## Pricing
 
-[Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator/#id=236a2be2-6ecb-46b8-ba2f-194649d516ef)
+[Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator/#id=18c7195b-a1a0-478d-b6b8-6adceccb53a4)
 
 * Region: Finland
 * 730 total hours per month

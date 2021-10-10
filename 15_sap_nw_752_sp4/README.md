@@ -20,6 +20,18 @@ It also includes all the standard ABAP AS infrastructure:
 * interoperability with ABAP Development Toolkit and SAP WebIDE, and
 * much more.
 
+## Configuration
+
+Configuration other than default values:
+
+| Variable | Description | Value |
+|----------|-------------|-------|
+| MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `sapnw752sp4` |
+| MY_GCP_GCE_TYPE | GCE machine type | `n1-standard-2` |
+| MY_GCP_GCE_DISK_BOOT_SIZE | Size of the boot disk | `250GB` |
+| MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `sles-15-sp3-sap` |
+| MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `suse-sap-cloud` |
+
 ## Pricing
 
 [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator/#id=16f48885-e5a1-4eac-91ce-0d745d816a76)
