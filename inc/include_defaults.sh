@@ -82,15 +82,15 @@ function debug_variables() {
 	echo "MY_STORAGE_WINDOWS_STARTUP_SCRIPT: $MY_STORAGE_WINDOWS_STARTUP_SCRIPT"
 	echo
 	echo "MY_GCP_ACCOUNT: $MY_GCP_ACCOUNT"
-	echo "MY_GCP_SHORT_NAME: $MY_GCP_SHORT_NAME" # A short name to quickly separate everything
-	echo "MY_GCP_PROJECT: $MY_GCP_PROJECT" # Google Cloud project ID
-	echo "MY_GCP_FOLDER [OPTIONAL]: $MY_GCP_FOLDER" # ID for the folder to use as a parent for the project
-	echo "MY_GCP_REGION: $MY_GCP_REGION" # Compute Engine region
-	echo "MY_GCP_ZONE: $MY_GCP_ZONE" # Fully-qualified name for zone
-	echo "MY_GCP_ROUTER: $MY_GCP_ROUTER" # Compute Engine router name
-	echo "MY_GCP_NETWORK: $MY_GCP_NETWORK" # Name of the Compute Engine network
-	echo "MY_GCP_SUBNET: $MY_GCP_SUBNET" # Name of the subnetwork for the network
-	echo "MY_GCP_SUBNET_RANGE: $MY_GCP_SUBNET_RANGE" # IP space allocated to the subnetwork in CIDR format
+	echo "MY_GCP_SHORT_NAME: $MY_GCP_SHORT_NAME"
+	echo "MY_GCP_PROJECT: $MY_GCP_PROJECT"
+	echo "MY_GCP_FOLDER [OPTIONAL]: $MY_GCP_FOLDER"
+	echo "MY_GCP_REGION: $MY_GCP_REGION"
+	echo "MY_GCP_ZONE: $MY_GCP_ZONE"
+	echo "MY_GCP_ROUTER: $MY_GCP_ROUTER"
+	echo "MY_GCP_NETWORK: $MY_GCP_NETWORK"
+	echo "MY_GCP_SUBNET: $MY_GCP_SUBNET"
+	echo "MY_GCP_SUBNET_RANGE: $MY_GCP_SUBNET_RANGE"
 	echo "MY_GCP_NAT: $MY_GCP_NAT" 
 	echo "MY_GCP_STORAGE: $MY_GCP_STORAGE"
 	echo "MY_GCP_GCE_NAME: $MY_GCP_GCE_NAME"
