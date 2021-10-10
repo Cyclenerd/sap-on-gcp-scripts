@@ -14,6 +14,7 @@
 #    MY_GCP_GCE_IMAGE_PROJECT
 #    MY_GCP_GCE_IMAGE_FAMILY
 #    MY_GCP_GCE_DISK_BOOT_NAME
+#    MY_GCP_GCE_DISK_BOOT_TYPE
 #    MY_GCP_GCE_DISK_BOOT_SIZE
 #    MY_GCP_GCE_STARTUP_SCRIPT_URL
 #    MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL
@@ -40,7 +41,7 @@ function create_vm() {
 		--image-project="$MY_GCP_GCE_IMAGE_PROJECT" \
 		--boot-disk-device-name="$MY_GCP_GCE_DISK_BOOT_NAME" \
 		--boot-disk-size="$MY_GCP_GCE_DISK_BOOT_SIZE" \
-		--boot-disk-type=pd-ssd \
+		--boot-disk-type="$MY_GCP_GCE_DISK_BOOT_TYPE" \
 		--no-shielded-secure-boot \
 		--shielded-vtpm \
 		--shielded-integrity-monitoring \

@@ -39,6 +39,7 @@ export MY_GCP_GCE_TYPE=${MY_GCP_GCE_TYPE:-"e2-micro"}
 export MY_GCP_GCE_IMAGE_FAMILY=${MY_GCP_GCE_IMAGE_FAMILY:-"debian-10"}
 export MY_GCP_GCE_IMAGE_PROJECT=${MY_GCP_GCE_IMAGE_PROJECT:-"debian-cloud"}
 export MY_GCP_GCE_DISK_BOOT_NAME=${MY_GCP_GCE_DISK_BOOT_NAME:-"ssd-boot-$MY_GCP_GCE_NAME"}
+export MY_GCP_GCE_DISK_BOOT_TYPE=${MY_GCP_GCE_DISK_BOOT_TYPE:-"pd-ssd"}
 export MY_GCP_GCE_DISK_BOOT_SIZE=${MY_GCP_GCE_DISK_BOOT_SIZE:-"32GB"}
 export MY_GCP_GCE_STARTUP_SCRIPT_URL=${MY_GCP_GCE_STARTUP_SCRIPT_URL:-"gs://$MY_GCP_STORAGE/startup/linux_startup_script.sh"}
 export MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL=${MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL:-"gs://$MY_GCP_STORAGE/startup/windows_startup_script.ps1"}
@@ -81,15 +82,15 @@ function debug_variables() {
 	echo "MY_STORAGE_WINDOWS_STARTUP_SCRIPT: $MY_STORAGE_WINDOWS_STARTUP_SCRIPT"
 	echo
 	echo "MY_GCP_ACCOUNT: $MY_GCP_ACCOUNT"
-	echo "MY_GCP_SHORT_NAME: $MY_GCP_SHORT_NAME" # A short name to separate everything
+	echo "MY_GCP_SHORT_NAME: $MY_GCP_SHORT_NAME" # A short name to quickly separate everything
 	echo "MY_GCP_PROJECT: $MY_GCP_PROJECT" # Google Cloud project ID
 	echo "MY_GCP_FOLDER [OPTIONAL]: $MY_GCP_FOLDER" # ID for the folder to use as a parent for the project
 	echo "MY_GCP_REGION: $MY_GCP_REGION" # Compute Engine region
 	echo "MY_GCP_ZONE: $MY_GCP_ZONE" # Fully-qualified name for zone
 	echo "MY_GCP_ROUTER: $MY_GCP_ROUTER" # Compute Engine router name
 	echo "MY_GCP_NETWORK: $MY_GCP_NETWORK" # Name of the Compute Engine network
-	echo "MY_GCP_SUBNET: $MY_GCP_SUBNET" # Name of the subnetwork (MY_GCP_SUBNET) for the network
-	echo "MY_GCP_SUBNET_RANGE: $MY_GCP_SUBNET_RANGE" # The IP space allocated to the subnetwork in CIDR format
+	echo "MY_GCP_SUBNET: $MY_GCP_SUBNET" # Name of the subnetwork for the network
+	echo "MY_GCP_SUBNET_RANGE: $MY_GCP_SUBNET_RANGE" # IP space allocated to the subnetwork in CIDR format
 	echo "MY_GCP_NAT: $MY_GCP_NAT" 
 	echo "MY_GCP_STORAGE: $MY_GCP_STORAGE"
 	echo "MY_GCP_GCE_NAME: $MY_GCP_GCE_NAME"
@@ -97,8 +98,10 @@ function debug_variables() {
 	echo "MY_GCP_GCE_IMAGE_FAMILY: $MY_GCP_GCE_IMAGE_FAMILY"
 	echo "MY_GCP_GCE_IMAGE_PROJECT: $MY_GCP_GCE_IMAGE_PROJECT"
 	echo "MY_GCP_GCE_DISK_BOOT_NAME: $MY_GCP_GCE_DISK_BOOT_NAME"
+	echo "MY_GCP_GCE_DISK_BOOT_TYPE: $MY_GCP_GCE_DISK_BOOT_TYPE"
 	echo "MY_GCP_GCE_DISK_BOOT_SIZE: $MY_GCP_GCE_DISK_BOOT_SIZE"
 	echo "MY_GCP_GCE_STARTUP_SCRIPT_URL: $MY_GCP_GCE_STARTUP_SCRIPT_URL"
+	echo "MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL: $MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL"
 	echo "MY_GCP_SA_NAME: $MY_GCP_SA_NAME"
 	echo "MY_GCP_SA_DISPLAY_NAME: $MY_GCP_SA_DISPLAY_NAME"
 	echo "MY_GCP_SA_DESCRIPTION: $MY_GCP_SA_DESCRIPTION"
