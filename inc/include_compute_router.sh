@@ -16,9 +16,9 @@ function create_router() {
 	fi
 }
 
-# Add a NAT to a Compute Engine router
+# Add NAT to a Compute Engine router
 function create_nat() {
-	echo_title "Add a NAT with name '$MY_GCP_NAT' to the Compute Engine router"
+	echo_title "Add NAT with name '$MY_GCP_NAT' to the Compute Engine router"
 	# https://cloud.google.com/nat/docs/using-nat
 	# Set min-ports-per-vm to fix SLES zypper
 	if ! gcloud compute routers nats create "$MY_GCP_NAT" \
