@@ -9,7 +9,7 @@ Configuration other than default values:
 | Variable | Description | Value |
 |----------|-------------|-------|
 | MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `windows` |
-| MY_GCP_GCE_TYPE | GCE machine type | `g1-small` |
+| MY_GCP_GCE_TYPE | GCE machine type | `g1-small` [vCPU: shared, RAM: 1.7 GB] |
 | MY_GCP_GCE_DISK_BOOT_SIZE | Size of the boot disk | `64GB` |
 | MY_GCP_GCE_DISK_BOOT_TYPE | Type of the boot disk | `pd-standard` (HDD) |
 | MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `windows-2019` |

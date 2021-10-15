@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Connecting to the serial console
+# For debugging only
 
 ################################################################################
 # INCLUDE FUNCTIONS
@@ -17,19 +17,11 @@ if ! source "$MY_INCLUDE"; then
 	echo      "    cd $BASE_PATH && bash $ME";echo
 	exit 9
 fi
+echo_success "Functions included"
 
 ################################################################################
 # MAIN
 ################################################################################
 
-echo_title "Connect to serial console of VM instance '$MY_GCP_GCE_NAME'"
-echo
-echo 'To disconnect from the serial console:'
-echo ' 1. Press the ENTER key'
-echo ' 2. Type ~. (tilde, followed by a period).'
-echo
-sleep 3
-gcloud compute connect-to-serial-port "$MY_GCP_GCE_NAME" \
-	--port 2 \
-	--zone="$MY_GCP_ZONE" \
-	--project="$MY_GCP_PROJECT"
+echo_title "Variables"
+debug_variables

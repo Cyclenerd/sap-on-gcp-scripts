@@ -43,7 +43,7 @@ export MY_GCP_GCE_DISK_BOOT_TYPE=${MY_GCP_GCE_DISK_BOOT_TYPE:-"pd-ssd"}
 export MY_GCP_GCE_DISK_BOOT_SIZE=${MY_GCP_GCE_DISK_BOOT_SIZE:-"32GB"}
 export MY_GCP_GCE_STARTUP_SCRIPT_URL=${MY_GCP_GCE_STARTUP_SCRIPT_URL:-"gs://$MY_GCP_STORAGE/startup/linux_startup_script.sh"}
 export MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL=${MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL:-"gs://$MY_GCP_STORAGE/startup/windows_startup_script.ps1"}
-export MY_GCP_GCE_SSH_COMMAND${MY_GCP_GCE_SSH_COMMAND:-"uname -a"}
+export MY_GCP_GCE_SSH_COMMAND=${MY_GCP_GCE_SSH_COMMAND:-"uname -a"}
 
 # Secrets
 export MY_GCP_SECRET=${MY_GCP_SECRET:-""}
@@ -67,6 +67,9 @@ export MY_GCP_SA_FILE=${MY_GCP_SA_FILE:-"private_key_""$MY_GCP_SA_NAME""_JSON.js
 # Images
 export MY_GCP_IMAGE=${MY_GCP_IMAGE:-"debian-10-buster-v20210916"}
 export MY_GCP_IMAGE_PROJECT=${MY_GCP_IMAGE_PROJECT:-"debian-cloud"}
+
+# Local IP for RDP tunnel
+export MY_RDP_LOCAL=${MY_RDP_LOCAL:-"127.19.72.6"}
 
 # Reset warnings
 export MY_WARNING=0

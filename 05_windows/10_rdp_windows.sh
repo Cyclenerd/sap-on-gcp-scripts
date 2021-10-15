@@ -3,15 +3,6 @@
 # Starts an IAP TCP forwarding tunnel for RDP
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="windows"
-export MY_RDP_LOCAL='127.19.72.6'
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 

@@ -3,14 +3,6 @@
 # Reset and return a password for a Windows machine instance
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="windows"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 
