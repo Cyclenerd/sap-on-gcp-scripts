@@ -3,17 +3,6 @@
 # Create service account and Compute Engine virtual machine instance
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="sles"
-export MY_GCP_GCE_TYPE="g1-small"
-export MY_GCP_GCE_IMAGE_FAMILY="sles-15"
-export MY_GCP_GCE_IMAGE_PROJECT="suse-cloud"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 

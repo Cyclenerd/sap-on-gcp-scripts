@@ -9,7 +9,7 @@ Configuration other than default values:
 | Variable | Description | Value |
 |----------|-------------|-------|
 | MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `sles` |
-| MY_GCP_GCE_TYPE | GCE machine type | `g1-small` |
+| MY_GCP_GCE_TYPE | GCE machine type | `g1-small` [vCPU: shared, RAM: 1.7 GB] |
 | MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `sles-15` |
 | MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `suse-cloud` |
 
