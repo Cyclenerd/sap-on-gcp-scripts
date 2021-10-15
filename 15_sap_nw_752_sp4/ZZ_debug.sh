@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# SSH into a Linux virtual machine instance
+# For debugging only
 
 ################################################################################
 # INCLUDE FUNCTIONS
@@ -17,10 +17,11 @@ if ! source "$MY_INCLUDE"; then
 	echo      "    cd $BASE_PATH && bash $ME";echo
 	exit 9
 fi
+echo_success "Functions included"
 
 ################################################################################
 # MAIN
 ################################################################################
 
-# SSH into a Linux virtual machine instance
-ssh_vm
+echo_title "Variables"
+debug_variables

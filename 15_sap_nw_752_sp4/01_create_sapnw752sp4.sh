@@ -3,20 +3,6 @@
 # Create service account and Compute Engine virtual machine instance
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-# Do not rename the server name.
-# This feature has been removed from the SAP developer edition for simplicity’s sake.
-export MY_GCP_GCE_NAME="sapnw752sp4"
-export MY_GCP_GCE_TYPE="n1-standard-2" # 2vCPU, 7.5GB RAM
-export MY_GCP_GCE_DISK_BOOT_SIZE="250GB"
-export MY_GCP_GCE_IMAGE_FAMILY="sles-15-sp3-sap"
-export MY_GCP_GCE_IMAGE_PROJECT="suse-sap-cloud"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 

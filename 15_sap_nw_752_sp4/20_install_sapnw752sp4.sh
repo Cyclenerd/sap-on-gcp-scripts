@@ -3,15 +3,6 @@
 # Install SAP NetWeaver AS ABAP Developer Edition 7.52 SP04 on virtual machine instance
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="sapnw752sp4"
-export MY_GCP_SECRET_NAME="sec-""$MY_GCP_GCE_NAME""-sap-os"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 
@@ -97,6 +88,7 @@ if ! [[ "$MY_PASSWORD" =~ ^[A-Z] ]]; then
 fi
 
 # Create a new secret and store password
+# In: MY_GCP_SECRET_NAME, MY_GCP_SECRET
 export MY_GCP_SECRET="$MY_PASSWORD"
 create_secret
 

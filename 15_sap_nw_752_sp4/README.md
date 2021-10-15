@@ -62,6 +62,7 @@ Information without guarantee.
 * `25_gui_tunnel_sapnw752sp4.sh`    : Starts an IAP TCP forwarding tunnel for SAP GUI
 * `30_access_secret_sapnw752sp4.sh` : Access secret version's data - Show OS password for SAP installation
 * `99_delete_sapnw752sp4.sh`        : Delete Compute Engine virtual machine instance and service account
+* `ZZ_debug.sh`                     : For debugging only
 
 ## Documentation
 

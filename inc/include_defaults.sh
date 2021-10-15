@@ -71,6 +71,9 @@ export MY_GCP_IMAGE_PROJECT=${MY_GCP_IMAGE_PROJECT:-"debian-cloud"}
 # Local IP for RDP tunnel
 export MY_RDP_LOCAL=${MY_RDP_LOCAL:-"127.19.72.6"}
 
+# Local IP for SAP GUI tunnel
+export MY_GUI_LOCAL=${MY_GUI_LOCAL:-"127.19.72.3"}
+
 # Reset warnings
 export MY_WARNING=0
 
@@ -114,4 +117,6 @@ function debug_variables() {
 	echo "MY_GCP_SA_FILE: $MY_GCP_SA_FILE"
 	echo "MY_GCP_SECRET_NAME: $MY_GCP_SECRET_NAME"
 	echo "MY_GCP_SECRET_LAST_VERSION: $MY_GCP_SECRET_LAST_VERSION"
+	echo "MY_RDP_LOCAL: $MY_RDP_LOCAL"
+	echo "MY_GUI_LOCAL: $MY_GUI_LOCAL"
 }

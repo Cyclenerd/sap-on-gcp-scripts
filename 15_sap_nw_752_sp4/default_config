@@ -1,0 +1,30 @@
+################################################################################
+# DEFAULTS
+# Please do not modify anything here.
+# You can override the default values by creating a custom 'config' file.
+# More help: https://github.com/Cyclenerd/sap-on-gcp-scripts#Configuration
+################################################################################
+
+# Name of Compute Engine virtual machine instance
+MY_GCP_GCE_NAME="sapnw752sp4"
+
+# GCE machine type
+MY_GCP_GCE_TYPE="n1-standard-2"
+
+# Type of the boot disk
+MY_GCP_GCE_DISK_BOOT_TYPE="pd-ssd"
+
+# Size of the boot disk
+MY_GCP_GCE_DISK_BOOT_SIZE="250GB"
+
+# Image family for the operating system that the boot disk will be initialized with
+MY_GCP_GCE_IMAGE_FAMILY="sles-15-sp3-sap"
+
+# Google Cloud project against which all image and image family references will be resolved
+MY_GCP_GCE_IMAGE_PROJECT="suse-sap-cloud"
+
+# Name of secret in Google Secret Manager
+MY_GCP_SECRET_NAME="sec-""$MY_GCP_GCE_NAME""-sap-os"
+
+# Local IP for SAP GUI tunnel
+MY_GUI_LOCAL="127.7.52.4"

@@ -3,15 +3,6 @@
 # Access secret version's data
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="sapnw752sp4"
-export MY_GCP_SECRET_NAME="sec-""$MY_GCP_GCE_NAME""-sap-os"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 

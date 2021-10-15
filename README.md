@@ -351,6 +351,14 @@ Textual description for the account
 * Default: `Service account for Google Compute Engine server $MY_GCP_GCE_NAME`
 * Example: `Service account for Google Compute Engine server default-name`
 
+### MY_GCP_SECRET_NAME
+
+Name of secret in Google Secret Manager
+
+* Variable: `MY_GCP_SECRET_NAME`
+* Default: `sec-$MY_GCP_GCE_NAME`
+* Example: `sec-default-name`
+
 ## FAQ
 
 * Q: Why shell scripts and not Ansible, Teraform, etc.?

@@ -3,15 +3,6 @@
 # Starts an IAP TCP forwarding tunnel for SAP GUI
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="sapnw752sp4"
-export MY_RDP_LOCAL='127.7.52.4'
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 
@@ -49,15 +40,15 @@ cat << EOF
 EOF
 echo_equals
 tput sgr0  # reset terminal
-echo_info "Tunnel local IP '$MY_RDP_LOCAL' port 3200 to '$MY_GCP_GCE_NAME' port 3200 for SAP GUI"
+echo_info "Tunnel local IP '$MY_GUI_LOCAL' port 3200 to '$MY_GCP_GCE_NAME' port 3200 for SAP GUI"
 echo
 echo
 echo "Connect to '$MY_GCP_GCE_NAME' via SAP GUI:"
-echo "> sapgui $MY_RDP_LOCAL 00"
+echo "> sapgui $MY_GUI_LOCAL 00"
 echo
 echo_info "Exit with [Ctrl] + [C]"
 echo
 gcloud compute start-iap-tunnel "$MY_GCP_GCE_NAME" 3200 \
-	--local-host-port="$MY_RDP_LOCAL:3200" \
+	--local-host-port="$MY_GUI_LOCAL:3200" \
 	--zone="$MY_GCP_ZONE" \
 	--project="$MY_GCP_PROJECT"
