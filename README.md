@@ -182,8 +182,8 @@ A short name to quickly separate everything
 Google Cloud project ID
 
 * Variable: `MY_GCP_PROJECT`
-* Default: `sap-sandbox-$MY_GCP_SHORT_NAME`
-* Example: `sap-sandbox-demo`
+* Default: `sandbox-$MY_GCP_SHORT_NAME`
+* Example: `sandbox-demo`
 
 ### MY_GCP_FOLDER
 

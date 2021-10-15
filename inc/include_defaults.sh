@@ -9,7 +9,7 @@
 # Project
 export MY_GCP_SHORT_NAME=${MY_GCP_SHORT_NAME:-"demo"}
 export MY_GCP_FOLDER=${MY_GCP_FOLDER:-""}
-export MY_GCP_PROJECT=${MY_GCP_PROJECT:-"sap-sandbox-$MY_GCP_SHORT_NAME"}
+export MY_GCP_PROJECT=${MY_GCP_PROJECT:-"sandbox-$MY_GCP_SHORT_NAME"}
 export MY_GCP_REGION=${MY_GCP_REGION:-"europe-north1"}
 export MY_GCP_ZONE=${MY_GCP_ZONE:-"$MY_GCP_REGION-c"}
 if [ ${#MY_GCP_SERVICES[@]} -eq 0 ]; then
