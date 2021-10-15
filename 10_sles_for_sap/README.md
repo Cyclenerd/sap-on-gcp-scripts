@@ -10,6 +10,7 @@ Configuration other than default values:
 |----------|-------------|-------|
 | MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `slessap` |
 | MY_GCP_GCE_TYPE | GCE machine type | `n1-standard-1` |
+| MY_GCP_GCE_DISK_BOOT_TYPE | Type of the boot disk | `pd-ssd` |
 | MY_GCP_GCE_DISK_BOOT_SIZE | Size of the boot disk | `64GB` |
 | MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `sles-15-sp3-sap` |
 | MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `suse-sap-cloud` |

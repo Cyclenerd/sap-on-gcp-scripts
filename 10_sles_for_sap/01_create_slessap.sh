@@ -3,18 +3,6 @@
 # Create service account and Compute Engine virtual machine instance
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="slessap"
-export MY_GCP_GCE_TYPE="n1-standard-1"
-export MY_GCP_GCE_DISK_BOOT_SIZE="64GB"
-export MY_GCP_GCE_IMAGE_FAMILY="sles-15-sp3-sap"
-export MY_GCP_GCE_IMAGE_PROJECT="suse-sap-cloud"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 
