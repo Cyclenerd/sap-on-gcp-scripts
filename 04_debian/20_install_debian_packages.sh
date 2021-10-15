@@ -3,29 +3,6 @@
 # SSH into a Linux virtual machine instance and install packages
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_GCE_NAME="debian"
-
-export MY_GCP_GCE_SSH_COMMAND="
-# Update
-sudo apt-get update
-# Install package
-sudo apt-get install -qq locales dialog screen htop mtr
-# Uncomment en_US.UTF-8 for inclusion in generation
-sudo sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen
-# Generate locale
-sudo locale-gen
-# Upgrade
-sudo apt-get dist-upgrade -qq
-# dotfiles
-curl -f 'https://raw.githubusercontent.com/Cyclenerd/dotfiles/master/screenrc' -o ~/.screenrc
-"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 

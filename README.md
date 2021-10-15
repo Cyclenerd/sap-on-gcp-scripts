@@ -154,7 +154,7 @@ bash 10_list_project.sh
 
 ## Configuration
 
-You can overwrite the  default configuration.
+You can overwrite the default configuration.
 Just create a configuration file with the name `config` in this folder or in the subfolders.
 
 Values from the configuration file in the subfolder overwrites values from the parent folder.
@@ -319,6 +319,13 @@ Windows PowerShell script that will be executed by the instances once they start
 * Variable: `MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL`
 * Default: `gs://$MY_GCP_STORAGE/startup/windows_startup_script.ps1`
 * Example: `gs://share-demo/startup/windows_startup_script.ps1`
+
+### MY_GCP_GCE_SSH_COMMAND
+
+SSH into Linux virtual machine instance and run this command
+
+* Variable: `MY_GCP_GCE_SSH_COMMAND`
+* Default: `uname -a`
 
 ### MY_GCP_SA_NAME
 

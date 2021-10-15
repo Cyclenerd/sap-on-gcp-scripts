@@ -9,6 +9,11 @@ Configuration other than default values:
 | Variable | Description | Value |
 |----------|-------------|-------|
 | MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `debian` |
+| MY_GCP_GCE_TYPE | GCE machine type | `e2-micro` [vCPUs: 2 (shared), RAM: 1GB] |
+| MY_GCP_GCE_DISK_BOOT_TYPE | Type of the boot disk | `pd-ssd` |
+| MY_GCP_GCE_DISK_BOOT_SIZE | Size of the boot disk | `32GB` |
+| MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `debian-10` |
+| MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `debian-cloud` |
 
 ## Pricing
 
@@ -30,6 +35,7 @@ Information without guarantee.
 * `10_ssh_debian.sh`              : SSH into a Linux virtual machine instance
 * `20_install_debian_packages.sh` : SSH into a Linux virtual machine instance and install packages
 * `99_delete_debian.sh`           : Delete Compute Engine virtual machine instance and service account
+* `ZZ_debug.sh`                   : For debugging only
 
 ## OS
 

@@ -6,6 +6,7 @@
 
 MY_STORAGE_BUCKET_DIR='./storage_bucket/'
 
+# Load custom config file
 if [[ "$MY_INCLUDE" == '../inc/'* ]]; then
 	MY_CONFIG='../config'
 	MY_STORAGE_BUCKET_DIR='../storage_bucket/'
@@ -16,6 +17,15 @@ if [[ "$MY_INCLUDE" == '../inc/'* ]]; then
 		source "$MY_CONFIG"
 	fi
 fi
+# Load default config file
+MY_DEFAULT_CONFIG='default_config'
+if [ -e "$MY_DEFAULT_CONFIG" ]; then
+	echo_info "Load default config file '$MY_DEFAULT_CONFIG'"
+	# ignore SC1090
+	# shellcheck source=/dev/null
+	source "$MY_DEFAULT_CONFIG"
+fi
+# Load custom config file
 MY_CONFIG='config'
 if [ -e "$MY_CONFIG" ]; then
 	echo_info "Load config file '$MY_CONFIG'"
