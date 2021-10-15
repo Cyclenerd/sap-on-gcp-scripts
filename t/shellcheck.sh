@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-shellcheck ../*/*.sh
+shellcheck ../*/*.sh && echo "✓ OK"
