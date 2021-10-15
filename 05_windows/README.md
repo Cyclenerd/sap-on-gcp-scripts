@@ -43,6 +43,7 @@ Information without guarantee.
 * `10_rdp_windows.sh`            : Starts an IAP TCP forwarding tunnel for RDP
 * `20_serial_console_windows.sh` : Connecting to the serial console
 * `99_delete_windows.sh`         : Delete Compute Engine virtual machine instance and service account
+* `ZZ_debug.sh`                  : For debugging only
 
 ## RDP
 
