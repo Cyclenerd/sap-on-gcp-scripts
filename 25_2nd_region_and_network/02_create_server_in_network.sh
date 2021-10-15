@@ -3,22 +3,6 @@
 # Create service account and Compute Engine virtual machine instance
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-# Project
-export MY_GCP_REGION="europe-west4"
-export MY_GCP_ZONE="$MY_GCP_REGION-c"
-
-# Network
-export MY_GCP_SUBNET="subnet-$MY_GCP_REGION"
-
-# VM instance
-export MY_GCP_GCE_NAME="debian-$MY_GCP_REGION"
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 

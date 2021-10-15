@@ -1,0 +1,39 @@
+################################################################################
+# DEFAULTS
+# Please do not modify anything here.
+# You can override the default values by creating a custom 'config' file.
+# More help: https://github.com/Cyclenerd/sap-on-gcp-scripts#Configuration
+################################################################################
+
+################################################################################
+# Project
+################################################################################
+
+# Compute Engine region
+MY_GCP_REGION="europe-west4"
+
+# Fully-qualified name for zone
+MY_GCP_ZONE="$MY_GCP_REGION-c"
+
+################################################################################
+# Network
+################################################################################
+
+# Name of the subnetwork for the network
+MY_GCP_SUBNET="subnet-$MY_GCP_REGION"
+
+# IP space allocated to the subnetwork in CIDR format
+MY_GCP_SUBNET_RANGE="192.168.204.0/24"
+
+# Name of Compute Engine router
+MY_GCP_ROUTER="router-$MY_GCP_REGION"
+
+# Add a NAT to Compute Engine router
+MY_GCP_NAT="nat-$MY_GCP_REGION"
+
+################################################################################
+# VM instance
+################################################################################
+
+# Name of Compute Engine virtual machine instance
+MY_GCP_GCE_NAME="debian-$MY_GCP_REGION"

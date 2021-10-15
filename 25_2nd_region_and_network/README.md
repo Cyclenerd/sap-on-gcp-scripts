@@ -16,3 +16,4 @@ Create the second network only if you want to set up failover or cluster.
 
 * `01_create_2nd_network.sh`       : Create a second Virtual Private Cloud (VPC) network in other region
 * `02_create_server_in_network.sh` : Create service account and Compute Engine virtual machine instance
+* `ZZ_debug.sh`                    : For debugging only

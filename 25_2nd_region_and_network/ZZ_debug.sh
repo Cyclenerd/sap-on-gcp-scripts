@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Create a second Virtual Private Cloud (VPC) network in other region
+# For debugging only
 
 ################################################################################
 # INCLUDE FUNCTIONS
@@ -17,25 +17,11 @@ if ! source "$MY_INCLUDE"; then
 	echo      "    cd $BASE_PATH && bash $ME";echo
 	exit 9
 fi
+echo_success "Functions included"
 
 ################################################################################
 # MAIN
 ################################################################################
 
-echo_title "Create network in region '$MY_GCP_REGION'"
-
-# Define a subnet with IP range for the network
-# In: MY_GCP_SUBNET, MY_GCP_SUBNET_RANGE, MY_GCP_NETWORK, MY_GCP_REGION
-create_subnet
-
-# Create a Compute Engine router
-# In: MY_GCP_ROUTER, MY_GCP_NETWORK, MY_GCP_REGION
-create_router
-
-# Add a NAT to a Compute Engine router
-# In: MY_GCP_NAT, MY_GCP_ROUTER, MY_GCP_REGION
-create_nat
-
-# Check MY_WARNING and exit with echo_success or echo_failure
-# In: MY_WARNING
-check_warning_and_exit "Network set up successfully"
+echo_title "Variables"
+debug_variables
