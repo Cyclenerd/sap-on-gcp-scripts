@@ -3,24 +3,6 @@
 # Create a service account for the SAP Cloud Appliance Library
 
 ################################################################################
-# DEFAULTS
-# Please do not modify anything here.
-# Variables are overwritten by the 'config' file.
-################################################################################
-
-export MY_GCP_SA_NAME="sa-sap-cal"
-export MY_GCP_SA_DISPLAY_NAME='SAP Cloud Appliance Library'
-export MY_GCP_SA_DESCRIPTION='Service account for SAP Cloud Appliance Library'
-# Compute Instance Admin (v1)
-# Compute Network Admin
-# Compute Security Admin
-export MY_GCP_SA_ROLES=(
-	'roles/compute.instanceAdmin.v1'
-	'roles/compute.networkAdmin'
-	'roles/compute.securityAdmin'
-)
-
-################################################################################
 # INCLUDE FUNCTIONS
 ################################################################################
 

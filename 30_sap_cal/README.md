@@ -18,6 +18,7 @@ Configuration other than default values:
 
 * `01_create_sap_cal_service_account.sh` : Create a service account for the SAP Cloud Appliance Library
 * `99_delete_sap_cal_service_account.sh` : Delete service account for the SAP Cloud Appliance Library
+* `ZZ_debug.sh`                          : For debugging only
 
 ## Create Account
 

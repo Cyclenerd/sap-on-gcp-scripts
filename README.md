@@ -351,6 +351,16 @@ Textual description for the account
 * Default: `Service account for Google Compute Engine server $MY_GCP_GCE_NAME`
 * Example: `Service account for Google Compute Engine server default-name`
 
+### MY_GCP_SA_ROLES
+
+IAM roles (policy binding) for service account
+
+* Variable: `MY_GCP_SA_ROLES`
+* Default:
+	* `roles/logging.logWriter`
+	* `roles/monitoring.metricWriter`
+	* `roles/monitoring.viewer`
+
 ### MY_GCP_SECRET_NAME
 
 Name of secret in Google Secret Manager

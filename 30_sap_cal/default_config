@@ -1,0 +1,25 @@
+################################################################################
+# DEFAULTS
+# Please do not modify anything here.
+# You can override the default values by creating a custom 'config' file.
+# More help: https://github.com/Cyclenerd/sap-on-gcp-scripts#Configuration
+################################################################################
+
+# The internal name of the new service account
+MY_GCP_SA_NAME="sa-sap-cal"
+
+# Textual name to display for the account
+MY_GCP_SA_DISPLAY_NAME='SAP Cloud Appliance Library'
+
+# Textual description for the account
+MY_GCP_SA_DESCRIPTION='Service account for SAP Cloud Appliance Library'
+
+# IAM roles (policy binding) for service account
+# Compute Instance Admin (v1)
+# Compute Network Admin
+# Compute Security Admin
+MY_GCP_SA_ROLES=(
+	'roles/compute.instanceAdmin.v1'
+	'roles/compute.networkAdmin'
+	'roles/compute.securityAdmin'
+)
