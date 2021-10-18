@@ -141,8 +141,8 @@ function wait_a_bit() {
 # Check bash version and tput
 ################################################################################
 
-if ! [[ "${BASH_VERSION}" =~ ^4 ]]; then
-	echo "× Bash version 4 is required"
+if ! [[ "${BASH_VERSION}" =~ ^[4,5] ]]; then
+	echo "× Bash version 4 or 5 is required"
 	echo "  Your bash version is: '${BASH_VERSION}'"
 	exit 9
 fi
