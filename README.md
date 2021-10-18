@@ -20,7 +20,13 @@ You can also start a [Windows server](05_windows/) with graphical desktop enviro
 
 ## Requirement
 
-Just a Bash shell and the Google Cloud SDK.
+A Bash shell and a few tools that are included in the standard GNU/Linux distribution.
+In addition, you need the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) which is very easy to install.
+
+If you don't have access to a local Bash shell or a Linux operating system, you can also use [Cloud Shell](https://cloud.google.com/shell/docs/using-cloud-shell).
+Cloud Shell already has all requirements and in your Cloud Shell Terminal you can run the scripts.
+
+You can also use [IAP Desktop](https://github.com/GoogleCloudPlatform/iap-desktop/) to connect to the Remote Desktop of your VM instances by using IAP TCP forwarding.
 
 ### Google Cloud
 
@@ -80,6 +86,13 @@ The following diagram shows the architecture for a default deployment of SAP Net
 ```
 
 ## Setup
+
+Clone this repo:
+
+```
+git clone https://github.com/Cyclenerd/sap-on-gcp-scripts.git
+cd sap-on-gcp-scripts
+```
 
 You can do the whole setup with the Bash scripts.
 Default values can be overwritten with a configuration file `config` in the folder.
