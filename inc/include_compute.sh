@@ -110,6 +110,7 @@ function ssh_vm() {
 		echo_failure "Could not SSH into VM"
 	fi
 }
+
 # SSH into a Linux virtual machine instance and run command
 # In: MY_GCP_GCE_NAME, MY_GCP_ZONE, MY_GCP_GCE_SSH_COMMAND
 function ssh_command() {
@@ -125,7 +126,6 @@ function ssh_command() {
 		echo_failure "Could not run command"
 	fi
 }
-
 
 # Delete Compute Engine virtual machine instance
 function delete_vm() {
