@@ -102,7 +102,10 @@ To do this, create a file named `config` in this folder:
 
 ```shell
 # Overwrite defaults
+# Name of Google Cloud storage bucket
 echo "MY_GCP_STORAGE=my-random-storage-name-123" > config
+# Change short name to quickly separate everything
+echo "MY_GCP_SHORT_NAME=random-name-123" >> config
 ```
 
 Further variables for configuration are explained below in the [Configuration](#Configuration) section.
