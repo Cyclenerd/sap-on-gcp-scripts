@@ -23,6 +23,12 @@
 # Allow full access to all Cloud APIs
 # Note that the level of access that a service account has is determined by a combination of access scopes and IAM roles
 # so you must configure both access scopes and IAM roles for the service account to work properly.
+#
+# https://cloud.google.com/sdk/gcloud/reference/compute/instances/create#--create-disk
+# name
+#    Specifies the name of the disk.
+# device-name
+#    An optional name that indicates the disk name the guest operating system will see.
 function create_vm() {
 	# Copy startup scripts to storage bucket
 	copy_startup_storage
@@ -37,11 +43,7 @@ function create_vm() {
 		--maintenance-policy=MIGRATE \
 		--scopes="cloud-platform" \
 		--service-account="$MY_GCP_SA_ID" \
-		--image-family="$MY_GCP_GCE_IMAGE_FAMILY" \
-		--image-project="$MY_GCP_GCE_IMAGE_PROJECT" \
-		--boot-disk-device-name="$MY_GCP_GCE_DISK_BOOT_NAME" \
-		--boot-disk-size="$MY_GCP_GCE_DISK_BOOT_SIZE" \
-		--boot-disk-type="$MY_GCP_GCE_DISK_BOOT_TYPE" \
+		--create-disk="auto-delete=yes,boot=yes,name=$MY_GCP_GCE_DISK_BOOT_NAME,device-name=$MY_GCP_GCE_DISK_BOOT_NAME,image-family=$MY_GCP_GCE_IMAGE_FAMILY,image-project=$MY_GCP_GCE_IMAGE_PROJECT,mode=rw,size=$MY_GCP_GCE_DISK_BOOT_SIZE,type=$MY_GCP_GCE_DISK_BOOT_TYPE" \
 		--no-shielded-secure-boot \
 		--shielded-vtpm \
 		--shielded-integrity-monitoring \
