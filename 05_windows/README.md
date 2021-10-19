@@ -15,6 +15,10 @@ Configuration other than default values:
 | MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `windows-2019` |
 | MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `windows-cloud` |
 
+64GB HDD results in poor I/O performance.
+If you don't want that you have to change the disk type and size and spend more money.
+For more information, please see: <https://developers.google.com/compute/docs/disks#performance>.
+
 ## Pricing
 
 [Google Cloud Pricing Calculator](https://cloud.google.com/products/calculator/#id=18c7195b-a1a0-478d-b6b8-6adceccb53a4)
