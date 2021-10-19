@@ -320,6 +320,17 @@ Size of the boot disk
 * Variable: `MY_GCP_GCE_DISK_BOOT_SIZE`
 * Default: `32GB`
 
+### MY_GCP_GCE_SNAPSHOT_STORAGE_LOCATION
+
+Google Cloud Storage location,
+either regional or multi-regional,
+where snapshot content of the disk is to be stored.
+
+* Variable: `MY_GCP_GCE_SNAPSHOT_STORAGE_LOCATION`
+* Default: `eu` (multible regions in European Union)
+* Example: `europe-north1` (Regional in Finland)
+
+
 ### MY_GCP_GCE_STARTUP_SCRIPT_URL
 
 Linux script that will be executed by the instances once they start running

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# List project content
+# Delete all Compute Engine boot disk snapshots from specific instance
 
 ################################################################################
 # INCLUDE FUNCTIONS
@@ -22,35 +22,10 @@ fi
 # MAIN
 ################################################################################
 
-echo_title "List project '$MY_GCP_PROJECT'"
-echo_web "https://console.cloud.google.com/home/activity?project=$MY_GCP_PROJECT"
+# Get last Compute Engine boot disk snapshot from specific instance
+# In: MY_GCP_GCE_NAME
+delete_all_snapshots_vm
 
-# List all service accounts
-list_service_accounts
-
-# List all Compute Engine routers
-list_routers
-
-# List all Compute Engine subnets and networks
-list_subnets
-
-# List all non-dynamic Google Compute Engine routes
-list_routes
-
-# List all firewall rules
-list_firewall_rules
-
-# List all secret names
-list_secrets
-
-# List all storage buckets
-list_storage
-
-# List all Compute Engine persistent disks
-list_disks
-
-# List all Compute Engine persistent disk snapshots
-list_snapshots
-
-# List all Compute Engine virtual machine instances
-list_vms
+# Check MY_WARNING and exit with echo_success or echo_failure
+# In: MY_WARNING
+check_warning_and_exit "All snapshots successfully deleted"

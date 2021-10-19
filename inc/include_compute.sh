@@ -79,6 +79,39 @@ function create_vm() {
 	fi
 }
 
+# Create GCE virtual machine instance with already created disk
+# In:
+#    MY_GCP_GCE_NAME
+#    MY_GCP_ZONE
+#    MY_GCP_GCE_TYPE
+#    MY_GCP_SUBNET
+#    MY_GCP_SA_ID
+#    MY_GCP_GCE_DISK_BOOT_NAME
+function create_disk_vm() {
+	# Create VM
+	echo_title "Create Compute Engine virtual machine instance '$MY_GCP_GCE_NAME' with boot disk '$MY_GCP_GCE_DISK_BOOT_NAME'"
+	echo "Please wait..."
+	if ! gcloud compute instances create "$MY_GCP_GCE_NAME" \
+		--zone="$MY_GCP_ZONE" \
+		--machine-type="$MY_GCP_GCE_TYPE" \
+		--subnet="$MY_GCP_SUBNET" \
+		--no-address \
+		--maintenance-policy=MIGRATE \
+		--scopes="cloud-platform" \
+		--service-account="$MY_GCP_SA_ID" \
+		--disk="auto-delete=yes,boot=yes,name=$MY_GCP_GCE_DISK_BOOT_NAME,device-name=$MY_GCP_GCE_DISK_BOOT_NAME,mode=rw" \
+		--no-shielded-secure-boot \
+		--shielded-vtpm \
+		--shielded-integrity-monitoring \
+		--reservation-affinity=any \
+		--project="$MY_GCP_PROJECT"; then
+		echo_warning "Could not create VM instance"
+		export MY_WARNING=1
+	else
+		echo_info "VM instance is starting... Please wait a few minutes..."
+	fi
+}
+
 # Start Compute Engine virtual machine instance
 function start_vm() {
 	echo_title "Start virtual machine instance '$MY_GCP_GCE_NAME' in zone '$MY_GCP_ZONE'"

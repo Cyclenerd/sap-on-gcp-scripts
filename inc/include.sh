@@ -160,6 +160,7 @@ MY_INCLUDE_FILES=(
 	'include_auth.sh'
 	'include_billing.sh'
 	'include_compute.sh'
+	'include_compute_disks.sh'
 	'include_compute_firewall.sh'
 	'include_compute_network.sh'
 	'include_compute_router.sh'

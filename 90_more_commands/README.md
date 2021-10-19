@@ -89,15 +89,6 @@ roles/compute.networkAdmin
 roles/compute.securityAdmin
 ```
 
-## Compute Engine disks
-
-To list all disks in a project in table form, run:
-
-```shell
-gcloud compute disks list \
-  --project=<MY_GCP_PROJECT>
-```
-
 ## Compute Engine disk types
 
 To list all disk types in a project in table form, run:
