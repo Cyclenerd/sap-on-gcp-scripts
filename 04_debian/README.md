@@ -40,7 +40,7 @@ Information without guarantee.
 ### Snapshots
 
 If you don't need your VM for a long time you can make a snapshot from the disk.
-You can then delete the VM and the disk.
+You can then delete the VM and the disk (`99_delete_debian.sh`).
 If you need the VM with the data again, you can create a new fresh VM from the snapshot.
 
 * `30_create_snapshot_debian.sh`      : Create snapshot of Compute Engine persistent boot disk
