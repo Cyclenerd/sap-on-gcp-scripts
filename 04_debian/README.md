@@ -52,6 +52,19 @@ You will then save the [disk cost](https://cloud.google.com/compute/all-pricing#
 * Regional snapshot storage $0.029 per GB in `europe-north1` (Finland)
 * Multi-regional snapshot storage $0.0286 per GB in `eu` (European Union) [DEFAULT]
 
+Example:
+
+```shell
+# Create snapshot
+bash 30_create_snapshot_debian.sh
+# Delete SA, Disk and VM
+bash 99_delete_debian.sh
+# Later, create new VM from snapshot
+bash 31_create_from_snapshot_debian.sh
+# Delete all snapshots
+bash 39_delete_snapshots_debian.sh
+```
+
 ## OS
 
 Become root:
