@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Create Compute Engine persistent boot disk from snapshot and
+# Create Compute Engine persistent boot disk from last snapshot and
 # create virtual machine instance with created disk
 
 ################################################################################
