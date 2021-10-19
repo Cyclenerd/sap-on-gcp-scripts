@@ -31,11 +31,26 @@ Information without guarantee.
 
 ## Scripts
 
-* `01_create_debian.sh`           : Create service account and Compute Engine virtual machine instance
-* `10_ssh_debian.sh`              : SSH into a Linux virtual machine instance
-* `20_install_debian_packages.sh` : SSH into a Linux virtual machine instance and install packages
-* `99_delete_debian.sh`           : Delete Compute Engine virtual machine instance and service account
-* `ZZ_debug.sh`                   : For debugging only
+* `01_create_debian.sh`               : Create service account and Compute Engine virtual machine instance
+* `10_ssh_debian.sh`                  : SSH into a Linux virtual machine instance
+* `20_install_debian_packages.sh`     : SSH into a Linux virtual machine instance and install packages
+* `99_delete_debian.sh`               : Delete Compute Engine virtual machine instance and service account
+* `ZZ_debug.sh`                       : For debugging only
+
+### Snapshots
+
+If you don't need your VM for a long time you can make a snapshot from the disk.
+You can then delete the VM and the disk.
+If you need the VM with the data again, you can create a new fresh VM from the snapshot.
+
+* `30_create_snapshot_debian.sh`      : Create snapshot of Compute Engine persistent boot disk
+* `31_create_from_snapshot_debian.sh` : Create Compute Engine persistent boot disk from last snapshot and create virtual machine instance with created disk
+* `39_delete_snapshots_debian.sh`     : Delete all Compute Engine boot disk snapshots from specific instance
+
+You will then save the [disk cost](https://cloud.google.com/compute/all-pricing#disk) and pay only the very cheap [snapshot price](https://cloud.google.com/compute/all-pricing#disk).
+
+* Regional snapshot storage $0.029 per GB in `europe-north1` (Finland)
+* Multi-regional snapshot storage $0.0286 per GB in `eu` (European Union) [DEFAULT]
 
 ## OS
 
