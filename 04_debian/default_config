@@ -17,7 +17,7 @@ MY_GCP_GCE_TYPE="e2-micro"
 MY_GCP_GCE_DISK_BOOT_TYPE="pd-ssd"
 
 # Size of the boot disk
-MY_GCP_GCE_DISK_BOOT_SIZE="32GB"
+MY_GCP_GCE_DISK_BOOT_SIZE="16GB"
 
 # Image family for the operating system that the boot disk will be initialized with
 MY_GCP_GCE_IMAGE_FAMILY="debian-10"
