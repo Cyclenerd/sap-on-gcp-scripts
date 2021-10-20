@@ -68,6 +68,7 @@ export MY_STORAGE_STARTUP_SCRIPT
 # Check required programs or exit
 ################################################################################
 
+check_command git
 check_command gcloud
 check_command gsutil
 check_command sha256sum

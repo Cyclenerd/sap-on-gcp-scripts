@@ -20,7 +20,7 @@ You can also start a [Windows server](05_windows/) with graphical desktop enviro
 
 ## Requirement
 
-A Bash shell and a few tools that are included in the standard GNU/Linux distribution.
+A Bash shell, Git and a few tools that are included in the standard GNU/Linux distribution.
 In addition, you need the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) which is very easy to install.
 
 If you don't have access to a local Bash shell or a Linux operating system, you can also use [Cloud Shell](https://cloud.google.com/shell/docs/using-cloud-shell).
@@ -37,9 +37,8 @@ You can also use [IAP Desktop](https://github.com/GoogleCloudPlatform/iap-deskto
 
 * GNU Bourne Again SHell
 	* `bash` (Version >= 4)
-* [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
-	* `gcloud` (Version >= 357.0.0)
-	* `gsutil` (Version >= 4.67)
+* [Git](https://git-scm.com/)
+	* `git`
 * GNU coreutils
 	* `sha256sum`
 	* `grep`
@@ -47,6 +46,9 @@ You can also use [IAP Desktop](https://github.com/GoogleCloudPlatform/iap-deskto
 	* `patch`
 	* `tr`
 	* `tput`
+* [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
+	* `gcloud` (Version >= 357.0.0)
+	* `gsutil` (Version >= 4.67)
 
 ## Tested
 

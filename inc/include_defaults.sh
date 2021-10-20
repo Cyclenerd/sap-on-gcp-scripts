@@ -10,6 +10,13 @@
 MY_SCRIPT_NAME=$(basename "$0")
 export MY_SCRIPT_NAME
 
+# Git
+MY_GIT_HEAD="0"
+if git rev-parse --short HEAD > /dev/null 2>&1; then
+	MY_GIT_HEAD=$(git rev-parse --short HEAD)
+fi
+export MY_GIT_HEAD
+
 # Project
 export MY_GCP_SHORT_NAME=${MY_GCP_SHORT_NAME:-"demo"}
 export MY_GCP_FOLDER=${MY_GCP_FOLDER:-""}
@@ -90,6 +97,7 @@ function debug_variables() {
 	echo "SHELL: $SHELL" # Current shell
 	echo "BASH_VERSION: $BASH_VERSION"
 	echo "MY_SCRIPT_NAME: $MY_SCRIPT_NAME"
+	echo "MY_GIT_HEAD: $MY_GIT_HEAD"
 	echo
 	echo "MY_CONFIG: $MY_CONFIG"
 	echo "MY_STORAGE_BUCKET_DIR: $MY_STORAGE_BUCKET_DIR"
