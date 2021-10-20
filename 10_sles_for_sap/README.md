@@ -43,3 +43,31 @@ Information without guarantee.
 * `01_create_slessap.sh` : Create service account and Compute Engine virtual machine instance
 * `10_ssh_slessap.sh`    : SSH into a Linux virtual machine instance
 * `99_delete_slessap.sh` : Delete Compute Engine virtual machine instance and service account
+
+### Snapshots
+
+If you don't need your VM for a long time you can make a snapshot from the disk.
+You can then delete the VM and the disk (`99_delete_sles.sh`).
+If you need the VM with the data again, you can create a new fresh VM from the snapshot.
+
+* `30_create_snapshot_slessap.sh`      : Create snapshot of Compute Engine persistent boot disk
+* `31_create_from_snapshot_slessap.sh` : Create Compute Engine persistent boot disk from last snapshot and create virtual machine instance with created disk
+* `39_delete_snapshots_slessap.sh`     : Delete all Compute Engine boot disk snapshots from specific instance
+
+You will then save the [disk cost](https://cloud.google.com/compute/all-pricing#disk) and pay only the very cheap [snapshot price](https://cloud.google.com/compute/all-pricing#disk).
+
+* Regional snapshot storage $0.029 per GB in `europe-north1` (Finland)
+* Multi-regional snapshot storage $0.0286 per GB in `eu` (European Union) [DEFAULT]
+
+Example:
+
+```shell
+# Create snapshot
+bash 30_create_snapshot_slessap.sh
+# Delete SA, Disk and VM
+bash 99_delete_slessap.sh
+# Later, create new VM from snapshot
+bash 31_create_from_snapshot_slessap.sh
+# Delete all snapshots
+bash 39_delete_snapshots_slessap.sh
+```
