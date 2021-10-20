@@ -64,6 +64,8 @@ You can also use [IAP Desktop](https://github.com/GoogleCloudPlatform/iap-deskto
 
 ## Tested
 
+[![Continuous Integration](https://github.com/Cyclenerd/sap-on-gcp-scripts/actions/workflows/main.yml/badge.svg)](https://github.com/Cyclenerd/sap-on-gcp-scripts/actions/workflows/main.yml)
+
 * Ubuntu on Windows (Windows Subsystem for Linux)
 
 ## Architecture
