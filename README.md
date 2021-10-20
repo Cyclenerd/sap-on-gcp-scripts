@@ -20,8 +20,8 @@ You can also start a [Windows server](05_windows/) with graphical desktop enviro
 
 ## Features
 
-* ✅ Test SAP software without a paid contract
-* ✅ Quickly deploy and use latest SAP solutions in the cloud
+* ✅ Test SAP software without a paid SAP contract
+* ✅ Quickly deploy and use latest SAP solutions in the Google Cloud Platform
 * ✅ Stress-free and easy configuration of Google Cloud services
 * ✅ Take advantage of Infrastrucure as Code (IaC)
 * ✅ Own virtual private cloud (VPC)
