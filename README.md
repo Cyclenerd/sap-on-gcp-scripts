@@ -18,6 +18,18 @@ You can also start a [Windows server](05_windows/) with graphical desktop enviro
 
 ![Diagram: IAP, VPC and NAT](images/diagram-iap-vpn-nat.jpg)
 
+## Features
+
+* ✅ Test SAP software without a paid contract
+* ✅ Quickly deploy and use latest SAP solutions in the cloud
+* ✅ Stress-free and easy configuration of Google Cloud services
+* ✅ Take advantage of Infrastrucure as Code (IaC)
+* ✅ Own virtual private cloud (VPC)
+* ✅ Windows jump host (RDP) with SAP GUI for Windows and Google Chrome
+* ✅ Access to network and server via Identity-Aware Proxy (IAP)
+* ✅ Already prebuilt scripts to stop all instances to save time and money
+* ✅ Prebuilt scripts to create snapshots of the instances and later create a the VM back from the snapshot again
+
 ## Requirement
 
 A Bash shell, Git and a few tools that are included in the standard GNU/Linux distribution.
