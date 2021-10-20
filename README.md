@@ -339,6 +339,12 @@ Linux script that will be executed by the instances once they start running
 * Default: `gs://$MY_GCP_STORAGE/startup/linux_startup_script.sh`
 * Example: `gs://share-demo/startup/linux_startup_script.sh`
 
+[View output](https://cloud.google.com/compute/docs/instances/startup-scripts/linux#viewing-output) of a Linux startup script:
+
+```shell
+sudo journalctl -u google-startup-scripts.service
+```
+
 ### MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL
 
 Windows PowerShell script that will be executed by the instances once they start running
