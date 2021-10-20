@@ -110,7 +110,7 @@ function exit_with_failure() {
 # Check MY_WARNING and exit with echo_success or echo_failure
 function check_warning_and_exit() {
 	MY_SUCCESS_TEXT="All steps set up successfully"
-	if [[ ! -z "$1" ]]; then
+	if [[ -n "$1" ]]; then
 		MY_SUCCESS_TEXT="$1"
 	fi
 	if [ "$MY_WARNING" -eq "0" ]; then
