@@ -28,6 +28,7 @@ Configuration other than default values:
 |----------|-------------|-------|
 | MY_GCP_GCE_NAME | Name of GCE virtual machine instance | `sapnw752sp4` |
 | MY_GCP_GCE_TYPE | GCE machine type | `n1-standard-2` |
+| MY_GCP_GCE_DISK_BOOT_TYPE | Type of the boot disk | `pd-ssd` |
 | MY_GCP_GCE_DISK_BOOT_SIZE | Size of the boot disk | `250GB` |
 | MY_GCP_GCE_IMAGE_FAMILY | Image family for the OS that the boot disk will be initialized with | `sles-15-sp3-sap` |
 | MY_GCP_GCE_IMAGE_PROJECT | Project against image family references | `suse-sap-cloud` |
@@ -43,7 +44,7 @@ Configuration other than default values:
 * Operating System / Software: Paid (USD 124.10)
 * Sustained Use Discount: 30%
 * Effective Hourly Rate: USD 0.243
-* Zonal SSD PD: 250 GiB
+* Zonal SSD PD: 250 GiB (USD 46.75)
 * Total Estimated Cost: USD 224.25 per 1 month 
 
 SUSE Linux Enterprise Server 15 for SAP usage fee billed by Google:
