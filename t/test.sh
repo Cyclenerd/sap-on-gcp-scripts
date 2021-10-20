@@ -29,6 +29,8 @@ echo_success "Functions included"
 #echo_warning "Text"
 #echo_success "Text"
 
+echo_wait
+
 echo_title "System Information"
 uname -a
 

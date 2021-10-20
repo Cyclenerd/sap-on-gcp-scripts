@@ -7,7 +7,7 @@
 # Create a Compute Engine network (VPC)
 function create_network() {
 	echo_title "Create a Compute Engine network (VPC) with name '$MY_GCP_NETWORK'"
-	echo "Please wait..."
+	echo_wait
 	if ! gcloud compute networks create "$MY_GCP_NETWORK" \
 		--subnet-mode=custom \
 		--mtu=1460 \
@@ -21,7 +21,7 @@ function create_network() {
 # Define a subnet with IP range for the network
 function create_subnet() {
 	echo_title "Define a subnet '$MY_GCP_SUBNET' with range '$MY_GCP_SUBNET_RANGE' for the network"
-	echo "Please wait..."
+	echo_wait
 	if ! gcloud compute networks subnets create "$MY_GCP_SUBNET" \
 		--range="$MY_GCP_SUBNET_RANGE" \
 		--network="$MY_GCP_NETWORK" \

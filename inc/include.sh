@@ -122,6 +122,10 @@ function check_warning_and_exit() {
 	fi
 }
 
+function echo_wait() {
+	echo "Please wait…"
+}
+
 function wait_a_bit() {
 	MY_SLEEP=0
 	MY_SLEEP_SEC=30

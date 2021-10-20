@@ -34,7 +34,7 @@ function create_vm() {
 	copy_startup_storage
 	# Create VM
 	echo_title "Create Compute Engine virtual machine instance '$MY_GCP_GCE_NAME'"
-	echo "Please wait..."
+	echo_wait
 	if ! gcloud compute instances create "$MY_GCP_GCE_NAME" \
 		--zone="$MY_GCP_ZONE" \
 		--machine-type="$MY_GCP_GCE_TYPE" \
@@ -90,7 +90,7 @@ function create_vm() {
 function create_disk_vm() {
 	# Create VM
 	echo_title "Create Compute Engine virtual machine instance '$MY_GCP_GCE_NAME' with boot disk '$MY_GCP_GCE_DISK_BOOT_NAME'"
-	echo "Please wait..."
+	echo_wait
 	if ! gcloud compute instances create "$MY_GCP_GCE_NAME" \
 		--zone="$MY_GCP_ZONE" \
 		--machine-type="$MY_GCP_GCE_TYPE" \
@@ -150,7 +150,7 @@ function ssh_vm() {
 # In: MY_GCP_GCE_NAME, MY_GCP_ZONE, MY_GCP_GCE_SSH_COMMAND
 function ssh_command() {
 	echo_title "SSH into VM '$MY_GCP_GCE_NAME' in zone '$MY_GCP_ZONE' and run command"
-	echo "Please wait..."
+	echo_wait
 	if gcloud compute ssh "$MY_GCP_GCE_NAME" \
 		--tunnel-through-iap \
 		--zone="$MY_GCP_ZONE" \
