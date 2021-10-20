@@ -49,6 +49,8 @@ function create_vm() {
 		--shielded-integrity-monitoring \
 		--reservation-affinity=any \
 		--metadata=startup-script-url="$MY_GCP_GCE_STARTUP_SCRIPT_URL",windows-startup-script-url="$MY_GCP_GCE_WINDOWS_STARTUP_SCRIPT_URL" \
+		--description="script-name:$MY_SCRIPT_NAME" \
+		--labels="git-head=$MY_GIT_HEAD,config-image-family=$MY_GCP_GCE_IMAGE_FAMILY,config-image-project=$MY_GCP_GCE_IMAGE_PROJECT" \
 		--project="$MY_GCP_PROJECT"; then
 		echo_warning "Could not create VM instance"
 		export MY_WARNING=1
@@ -104,6 +106,8 @@ function create_disk_vm() {
 		--shielded-vtpm \
 		--shielded-integrity-monitoring \
 		--reservation-affinity=any \
+		--description="script-name:$MY_SCRIPT_NAME" \
+		--labels="git-head=$MY_GIT_HEAD,config-image-family=$MY_GCP_GCE_IMAGE_FAMILY,config-image-project=$MY_GCP_GCE_IMAGE_PROJECT" \
 		--project="$MY_GCP_PROJECT"; then
 		echo_warning "Could not create VM instance"
 		export MY_WARNING=1
