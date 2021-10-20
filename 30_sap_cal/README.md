@@ -17,11 +17,62 @@ Configuration other than default values:
 ## Scripts
 
 * `01_create_sap_cal_service_account.sh` : Create a service account for the SAP Cloud Appliance Library
+* `02_details_for_sap_cal.sh`            : Show details and generate a valid SAP master password
 * `99_delete_sap_cal_service_account.sh` : Delete service account for the SAP Cloud Appliance Library
 * `ZZ_debug.sh`                          : For debugging only
 
 ## Create Account
 
+Create a service account and key for SAP CAL:
+
+```shell
+bash 01_create_sap_cal_service_account.sh
+```
+
 Upload `private_key_sa-sap-cal_JSON.json`:
 
 ![Screenshot: SAP CAL](../images/sap_cal_json.jpg)
+
+## Create Instance
+
+Enabele advanced mode:
+
+![Screenshot: SAP CAL Instance](../images/cal-1-advanced.png)
+
+Show details and generate a valid SAP master password:
+
+```shell
+bash 02_details_for_sap_cal.sh
+```
+
+Example:
+
+![Screenshot: Instance details for SAP CAL](../images/cal-2-details.png)
+
+Enter details:
+
+![Screenshot: SAP CAL Instance](../images/cal-3-enter-details.png)
+
+Disable extra Windows virtual machine (we have our own Windows jump host. Please see [05_windows](../05_windows/)):
+
+![Screenshot: Disable Windows](../images/cal-4-disable-windows.png)
+
+Keep clicking until all is completed 😀
+
+## Connect
+
+Get IP:
+
+![Screenshot: SAP CAL IP](../images/cal-5-vm-ip.png)
+
+Get SAP system data:
+
+![Screenshot: SAP CAL system data](../images/cal-6-passwords.png)
+
+Enter this information in your SAP logon and connect to the SAP system:
+
+![Screenshot: SAP Logon](../images/cal-7-sapgui-s4h.png)
+
+Have fun:
+
+![Screenshot: SAP GUI ST06](../images/cal-8-s4h-st06.png)
