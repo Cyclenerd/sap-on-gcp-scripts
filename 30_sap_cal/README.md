@@ -1,6 +1,10 @@
 # SAP Cloud Appliance Library
 
-Create a service account and private key JSON for SAP Cloud Appliance Library.
+Create a service account and private key JSON for [SAP Cloud Appliance Library](https://cal.sap.com/).
+
+> SAP Cloud Appliance Library offers a quick and easy way to consume the latest SAP solutions in the cloud, such as SAP S/4HANA, SAP HANA Express Edition, Model Company Solutions, Industry Solutions etc.
+> 
+> It's an online library of latest, preconfigured, ready-to-use SAP solutions that can be instantly deployed into your own public cloud accounts (e.g. [...] Google Cloud Platform) to kick-start your SAP projects - within few hours!
 
 ## Configuration
 
