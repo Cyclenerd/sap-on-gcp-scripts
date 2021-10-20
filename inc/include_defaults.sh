@@ -6,6 +6,10 @@
 # Variables are overwritten by the 'config' file.
 ################################################################################
 
+# Scripts
+MY_SCRIPT_NAME=$(basename "$0")
+export MY_SCRIPT_NAME
+
 # Project
 export MY_GCP_SHORT_NAME=${MY_GCP_SHORT_NAME:-"demo"}
 export MY_GCP_FOLDER=${MY_GCP_FOLDER:-""}
@@ -85,6 +89,8 @@ function debug_variables() {
 	echo "USER: $USER" # Current operating system username
 	echo "SHELL: $SHELL" # Current shell
 	echo "BASH_VERSION: $BASH_VERSION"
+	echo "MY_SCRIPT_NAME: $MY_SCRIPT_NAME"
+	echo
 	echo "MY_CONFIG: $MY_CONFIG"
 	echo "MY_STORAGE_BUCKET_DIR: $MY_STORAGE_BUCKET_DIR"
 	echo "MY_STORAGE_STARTUP_DIR: $MY_STORAGE_STARTUP_DIR"
