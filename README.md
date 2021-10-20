@@ -423,10 +423,6 @@ Name of secret in Google Secret Manager
 * Q: Why shell scripts and not Ansible, Teraform, etc.?
 * A: Ansible is another dependency you need to understand as well. Most people in the SAP area already know shell scripts. Therefore shell scripts.
 
-## TODO
-
-* Run [SAP HANA, express edition](https://hub.docker.com/_/sap-hana-express-edition) in Container-Optimized OS
-
 ## Contributing
 
 Have a patch that will benefit this project?
