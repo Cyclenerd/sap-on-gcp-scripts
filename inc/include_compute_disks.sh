@@ -53,6 +53,7 @@ function get_last_snapshot_vm() {
 # In: MY_GCE_SNAPSHOT_NAME, MY_GCP_GCE_DISK_BOOT_NAME, MY_GCP_GCE_DISK_BOOT_TYPE
 function create_disk_from_snapshot() {
 	echo_title "Create boot disk '$MY_GCP_GCE_DISK_BOOT_NAME' in zone '$MY_GCP_ZONE' from '$MY_GCE_SNAPSHOT_NAME'"
+	echo "Please wait..."
 	if ! gcloud compute disks create "$MY_GCP_GCE_DISK_BOOT_NAME" \
 		--source-snapshot="$MY_GCE_SNAPSHOT_NAME" \
 		--type="$MY_GCP_GCE_DISK_BOOT_TYPE" \
