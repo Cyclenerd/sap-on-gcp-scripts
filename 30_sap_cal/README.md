@@ -39,7 +39,7 @@ Upload `private_key_sa-sap-cal_JSON.json`:
 
 ## Create Instance
 
-Enabele advanced mode:
+Enable advanced mode:
 
 ![Screenshot: SAP CAL Instance](../images/cal-1-advanced.png)
 
