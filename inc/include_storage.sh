@@ -108,7 +108,7 @@ function list_storage() {
 	echo_web "https://console.cloud.google.com/storage/browser?project=$MY_GCP_PROJECT"
 	if ! gsutil ls \
 		-p "$MY_GCP_PROJECT"; then
-		echo_warning "Could not list routers"
+		echo_warning "Could not list buckets"
 		export MY_WARNING=1
 	fi
 }
