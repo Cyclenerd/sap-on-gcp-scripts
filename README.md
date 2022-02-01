@@ -113,14 +113,12 @@ cd sap-on-gcp-scripts
 You can do the whole setup with the Bash scripts.
 Default values can be overwritten with a configuration file `config` in the folder.
 
-I recommend you to change the default name (variable `MY_GCP_STORAGE`) of the Google Storage bucket.
-To do this, create a file named `config` in this folder:
+I recommend you to change the value of the default variable `MY_GCP_SHORT_NAME`.
+Use something unique like your name or a combination of numbers.
 
+To do this, create a file named `config` in this folder:
 ```shell
-# Overwrite defaults
-# Name of Google Cloud storage bucket
-echo "MY_GCP_STORAGE=my-random-storage-name-123" > config
-# Change short name to quickly separate everything
+# Short random name to quickly separate project, network and storage bucket name
 echo "MY_GCP_SHORT_NAME=random-name-123" >> config
 ```
 
@@ -204,10 +202,16 @@ echo "MY_GCP_GCE_NAME=linux" >> config
 
 ### MY_GCP_SHORT_NAME
 
-A short name to quickly separate everything
+A short name to quickly separate project ID, network and storage bucket name.
 
 * Variable: `MY_GCP_SHORT_NAME`
 * Default: `demo`
+
+By default, this name is used by the variables:
+
+* [MY_GCP_PROJECT](#my_gcp_project) : Google Cloud project ID (`sandbox-$MY_GCP_SHORT_NAME`)
+* [MY_GCP_NETWORK](#my_gcp_network) : Name of the Compute Engine network (`network-$MY_GCP_SHORT_NAME`)
+* [MY_GCP_STORAGE](#my_gcp_storage) : Name of Google Cloud storage bucket (`share-$MY_GCP_SHORT_NAME`)
 
 ### MY_GCP_PROJECT
 
