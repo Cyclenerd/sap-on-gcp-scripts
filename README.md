@@ -1,5 +1,40 @@
 # SAP on Google Cloud Platform Boilerplate
 
+[![Badge: SAP](https://img.shields.io/badge/SAP-0FAAFF?logo=sap&logoColor=white)](#readme)
+[![Badge: License](https://img.shields.io/github/license/cyclenerd/sap-on-gcp-scripts)](https://github.com/Cyclenerd/sap-on-gcp-scripts/blob/master/LICENSE)
+
+---
+
+## Public Archive Notice
+
+This repository has been transitioned to a public archive.
+While development has ceased, the codebase remains available for reference and historical purposes.
+
+**Impact on Current Users:**
+
+* New features and bug fixes will no longer be implemented.
+* Issues and pull requests will not be reviewed or merged.
+
+**Accessing the Codebase:**
+
+* You can continue to clone, fork, and explore the code at your convenience.
+* The codebase reflects the repository's state at the time of archiving.
+
+**Staying Informed:**
+
+* I recommend considering alternative projects that are actively maintained for your ongoing development needs.
+
+**Contributing:**
+
+* While new contributions are no longer accepted in this repository, feel free to explore forking the codebase and creating your own derivative project.
+
+**Thank You:**
+
+I appreciate your past contributions and interest in this project.
+I hope the archived codebase remains a valuable resource!
+
+---
+
 A collection of Bash shell scripts with which you can quickly create your own Virtual Private Cloud (VPC) in the Google Cloud Platform.
 In your VPC you can then start various servers.
 Including Windows Server and SAP NetWeaver AS ABAP Developer Edition 7.52 SP04.
